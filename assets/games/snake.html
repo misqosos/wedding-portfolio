@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div.a{
+		text-align: center;
+	}
+	div.b{
+		text-align: center;
+		margin-right: 370px;
+	}
+	div.c{
+		text-align: center;
+	}
+	</style>
+	<title>hadik</title>
+</head>
+<body>
+	<div class="c">
+	<button id="btn" onclick="startGame()">Start GAME</button>
+	</div>
+	<div class="a">
+	<canvas id="cvs" width="500" height="500">
+	</canvas>
+	</div>
+	<div class="b">
+	<p id="vypis" style="font-size:25px";></p>
+	<p id="vypis2"></p>
+	</div>
+	<script type="text/javascript">
+	
+const vypis = document.getElementById("vypis");
+const vypis2 = document.getElementById("vypis2");
+const cvs = document.getElementById("cvs");
+const ctx = cvs.getContext("2d");
+const btn = document.getElementById("btn"); 
+ 
+function drawCircle(x, y, r, color){
+	ctx.fillStyle = color;
+	ctx.beginPath();
+	ctx.arc(x, y, r, 0, Math.PI*2);
+	ctx.fill();
+}
+
+function drawRect(x, y, w, h, color){
+	ctx.fillStyle = color;
+	ctx.lineWidth = "4";
+	ctx.beginPath();
+	ctx.rect(x, y, w, h);
+	ctx.fill();
+	ctx.stroke();
+}
+
+function drawText(text,x,y,font,color){
+	ctx.fillStyle = color;
+	ctx.font = font;
+	ctx.fillText(text,x,y);
+}
+
+const playArea = {
+	w: cvs.width,
+	h: cvs.height,
+	x: 0,
+	y: 0,
+	color: "white"
+}
+
+const snakeBody = {
+	r: 10,
+	color: "gold",
+	x: cvs.width/2,
+	y: cvs.height/2,
+	dxRight: 0,
+	dxLeft: 0,
+	dyUp: 0,
+	dyDown: 0
+}
+
+//pozicna mnozina jedlo X
+foodArrX = [ 10, 30, 50, 70, 90,
+		    110,130,150,170,190,
+		    210,230,250,270,290,
+		    310,330,350,370,390,
+		    410,430,450,470,490];
+
+var foodPosX = foodArrX[Math.floor(Math.random()*foodArrX.length)];
+
+foodArrY = [ 10, 30, 50, 70, 90,
+		    110,130,150,170,190,
+		    210,230,250,270,290,
+		    310,330,350,370,390,
+		    410,430,450,470,490];
+
+//pozicna mnozina jedlo Y
+var foodPosY = foodArrY[Math.floor(Math.random()*foodArrY.length)];
+
+const food = {
+	r: 5,
+	x: foodPosX,
+	y: foodPosY
+}
+//kontrola pre pohyb o dx || dy
+var controlNum = 0;
+//kontrola pohybu pri stlaceni sipky
+var eventArr = [];
+var n = eventArr.length;
+//pozicna mnozina hadik
+var posX = [];
+var posY = [];
+var l = posX.length;
+var k = posY.length;
+
+var start = false;
+
+function startGame(){
+	start = true;
+	if(tailAddDraw > 0){
+		location.reload();
+	}
+}
+
+function arrowMove(){
+	if(start == false){
+		return false;
+	}else{true}
+	switch(event.keyCode){
+		case 38://hore 
+			//zamedzenie ostatneho pohybu
+			event.preventDefault();
+			n = eventArr.length;
+			eventArr[n] = "38";
+			if(event && event.keyCode == eventArr[n-1]){
+				return false;
+			}
+			if(event && snakeBody.dyDown == 20 || eventArr[n-1] == "40"){
+				return false;
+			}
+			controlNum = 1;
+			
+			if(snakeBody.y-snakeBody.r == 0){
+				true;
+			}else{l = posX.length;
+				  k = posY.length;
+			
+			      posX[l] = snakeBody.x;
+			      posY[k] = snakeBody.y;
+				  }
+			
+			//pohyb po mape
+			snakeBody.dxRight = 0;
+			snakeBody.dxLeft = 0;
+			snakeBody.dyUp = 20;
+			snakeBody.dyDown = 0;
+			if(snakeBody.y-snakeBody.r == 0){snakeBody.dyUp = 1}
+			snakeBody.y-=snakeBody.dyUp;
+			break;
+		case 40://dole 
+			//zamedzenie ostatneho pohybu
+			event.preventDefault();
+			n = eventArr.length;
+			eventArr[n] = "40";
+			if(event && event.keyCode == eventArr[n-1]){
+				return false;
+			}
+			if(event && snakeBody.dyUp == 20 || eventArr[n-1] == "38"){
+				return false;
+			}
+			controlNum = 1;
+			
+			if(snakeBody.y+snakeBody.r == playArea.h){
+				true;
+			}else{l = posX.length;
+				  k = posY.length;
+			
+			      posX[l] = snakeBody.x;
+			      posY[k] = snakeBody.y;
+				  }
+			
+			//pohyb po mape
+			snakeBody.dxRight = 0;
+			snakeBody.dxLeft = 0;
+			snakeBody.dyUp = 0;
+			snakeBody.dyDown = 20;
+			if(snakeBody.y+snakeBody.r == playArea.h){snakeBody.dyDown = 1}
+			snakeBody.y+=snakeBody.dyDown;
+			break;
+		case 37://dolava
+			//zamedzenie ostatneho pohybu
+			n = eventArr.length;
+			eventArr[n] = "37";
+			if(event && event.keyCode == eventArr[n-1]){
+				return false;
+			}
+			if(event && snakeBody.dxRight == 20 || eventArr[n-1] == "39"){
+				return false;
+			}
+			controlNum = 1;
+			
+			if(snakeBody.x-snakeBody.r == 0){
+				true;
+			}else{l = posX.length;
+				  k = posY.length;
+			
+			      posX[l] = snakeBody.x;
+			      posY[k] = snakeBody.y;
+				  }
+			
+			//pohyb po mape
+			snakeBody.dxRight = 0;
+			snakeBody.dxLeft = 20;
+			snakeBody.dyUp = 0;
+			snakeBody.dyDown = 0;
+			if(snakeBody.x-snakeBody.r == 0){snakeBody.dxLeft = 1}
+			snakeBody.x-=snakeBody.dxLeft;
+			break;
+		case 39://doprava
+			//zamedzenie ostatneho pohybu
+			n = eventArr.length;
+			eventArr[n] = "39";
+			if(event && event.keyCode == eventArr[n-1]){
+				return false;
+			}
+			if(event && snakeBody.dxLeft == 20 || eventArr[n-1] == "37"){
+				return false;
+			}
+			controlNum = 1;
+			
+			if(snakeBody.x+snakeBody.r == playArea.w){
+				true;
+			}else{l = posX.length;
+				  k = posY.length;
+			
+			      posX[l] = snakeBody.x;
+			      posY[k] = snakeBody.y;
+				  }
+			
+			//pohyb po mape
+			snakeBody.dxRight = 20;
+			snakeBody.dxLeft = 0;
+			snakeBody.dyUp = 0;
+			snakeBody.dyDown = 0;
+			if(snakeBody.x+snakeBody.r == playArea.w){snakeBody.dxRight = 1}
+			snakeBody.x+=snakeBody.dxRight;
+			break;
+	}
+}
+
+document.addEventListener("keydown", arrowMove);
+
+//konstanta na pridanie chvosta
+var tailAdd = 2;
+var tailAddDraw = 0;
+var score = 0;
+var wallBang = false;
+var tailBang = false;
+
+function graphics(){
+	drawRect(playArea.x, playArea.y, playArea.w, playArea.h, "lightgrey");
+	drawCircle(food.x, food.y, food.r, "firebrick");
+	drawCircle(snakeBody.x, snakeBody.y, snakeBody.r, snakeBody.color);
+	
+	//vypis2.innerHTML = posY + "<br>" +  posY.length;
+}
+
+function update(){
+	//kontrola pre kreslenie hlavy
+	if(eventArr[n] > 0){tailAddDraw = 1}
+	
+	if(start == true){
+		btn.innerHTML = "Restart GAME";
+	}
+	
+	//skore vypis
+	vypis.innerHTML = "Dots eaten: " + score;
+	
+	//kolizia stena
+	if(snakeBody.x+snakeBody.r > playArea.w ||
+	   snakeBody.x-snakeBody.r < 0 ||
+	   snakeBody.y+snakeBody.r > playArea.h ||
+	   snakeBody.y-snakeBody.r < 0){
+		    
+			posX[l] = posX[l-tailAdd];
+			posY[k] = posY[k-tailAdd];
+			Object.freeze(snakeBody);
+			Object.freeze(posX);
+			Object.freeze(posY);
+		    wallBang = true;
+			start = false;
+	   }
+	
+	//update jedla
+	if(snakeBody.x == food.x && snakeBody.y == food.y){
+		tailAdd++;
+		score++;
+		foodPosX = foodArrX[Math.floor(Math.random()*foodArrX.length)];
+		foodPosY = foodArrY[Math.floor(Math.random()*foodArrY.length)];
+		food.x = foodPosX;
+		food.y = foodPosY;
+	}
+	
+	if(posY[k] == posY[k-1] && posX[l] == posX[l-1]){
+		posY.pop();
+		posX.pop();
+	}
+	
+	//update chvosta
+	l = posX.length;
+	k = posY.length;
+	
+	posX[l] = snakeBody.x;
+	posY[k] = snakeBody.y;
+	
+	for(var i = 1; i <= tailAdd; i++){
+		
+		if(tailAddDraw == 0){return false}
+				
+		//rebound jedla 
+		if(foodPosX == posX[l-i] && foodPosY == posY[k-i]){
+			foodPosX = foodArrX[Math.floor(Math.random()*foodArrX.length)];
+			foodPosY = foodArrY[Math.floor(Math.random()*foodArrY.length)];
+			food.x = foodPosX;
+			food.y = foodPosY;
+			drawCircle(food.x, food.y, food.r, "firebrick");
+			}
+		
+		//kreslenie chvosta
+		drawCircle(posX[l-i], posY[k-i], snakeBody.r, "goldenrod");
+		
+		//kolizia hlava -> chvost
+		if(snakeBody.x == posX[l-i] &&
+		   snakeBody.y == posY[k-i]){
+			drawCircle(posX[l-i], posY[k-i], snakeBody.r, snakeBody.color);
+			tailBang = true;
+			start = false;
+			posX[l] = posX[l-tailAdd];
+			posY[k] = posY[k-tailAdd];
+			Object.freeze(snakeBody);
+			Object.freeze(posX);
+			Object.freeze(posY);
+		}
+	}
+}
+
+function move(){ 
+	if(controlNum == 1){
+		return controlNum = 0;
+	}
+	if(snakeBody.x-snakeBody.r == 0 && posY[k] == posY[k-1]){
+		snakeBody.dxLeft = 1;
+	}
+	if(snakeBody.x+snakeBody.r == playArea.w && posY[k] == posY[k-1]){
+		snakeBody.dxRight = 1;
+	}
+	if(snakeBody.y-snakeBody.r == 0 && posX[l] == posX[l-1]){
+		snakeBody.dyUp = 1;
+	}
+	if(snakeBody.y+snakeBody.r == playArea.h && posX[l] == posX[l-1]){
+		snakeBody.dyDown = 1;
+	}
+
+	snakeBody.x+=snakeBody.dxRight;
+	snakeBody.x-=snakeBody.dxLeft;
+	snakeBody.y-=snakeBody.dyUp;
+	snakeBody.y+=snakeBody.dyDown;
+}
+
+/*const hamburger = new Image();
+hamburger.src = "https://mega.nz/file/6tgkwJSL#U_Kh1gI2vEiglx0qkCuSeXAoOC2tNG7uuIsP58wI-Gk";
+
+function picture(){
+	ctx.drawImage(hamburger, food.x - 3*food.r, food.y - 3*food.r, 30, 30);
+	requestAnimationFrame(picture);
+}*/
+
+function text(){
+	if(tailBang == true){
+		drawText("Ah, I eat myself !!!",70,220,"50px fantasy","firebrick");
+	}
+	if(wallBang == true){
+		drawText("Ouch my head !!!",50,220,"60px fantasy","peru");
+	}
+	if(tailAddDraw == 0 && start == true){
+		drawText("Now hit it by arrows baby !",40,220,"40px fantasy","darkgreen");
+	}
+	if(start == false && tailAddDraw == 0){
+		drawText("Hit button above !",110,150,"40px fantasy","darkblue");
+	}
+	//requestAnimationFrame(text);
+}
+
+function render(){
+	move();
+	graphics();
+	update();
+	//picture();
+	text();
+}
+
+setInterval(render, 100);
+
+
+	</script>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,103 @@
+<div title="surname" name="questionWrapper">
+    <p>Ako sa volám priezviskom?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio"> 
+            <label><input type="radio" name="surname" value="Kováč"/> Kováč</label> <br>
+            <label><input type="radio" name="surname" value="Husár" /> Husár</label> <br>
+            <label><input type="radio" name="surname" value="Drotár" /> Drotár</label> <br>
+            <label><input type="radio" name="surname" value="Hronec" /> Hronec</label> <br>
+            <label><input type="radio" name="surname" value="Stolár" /> Stolár</label> 
+        </div>
+    </div>
+</div>
+
+<div title="dob" style="display: none;" name="questionWrapper">
+    <p>Kedy som sa narodil?</p>
+    <div class="form-options-date">
+        <input id="day" type="number" name="dob" placeholder="Deň"/> . 
+        <input id="month" type="number" name="dob" placeholder="Mesiac"/> . 
+        <input id="year" type="number" name="dob" placeholder="Rok"/> 
+    </div>
+</div>
+
+<div title="meetingPlace" style="display: none;" name="questionWrapper">
+    <p>Kde sme sa spoznali?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="meetingPlace" value="Bar" /> Bar</label> <br>
+            <label><input type="radio" name="meetingPlace" value="Diskotéka" /> Diskotéka</label> <br>
+            <label><input type="radio" name="meetingPlace" value="Festival" /> Festival</label> <br>
+            <label><input type="radio" name="meetingPlace" value="Zoznamka" /> Zoznamka</label> <br>
+            <label><input type="radio" name="meetingPlace" value="Škola" /> Škola</label> 
+        </div>
+    </div>
+</div>
+
+<div title="age" style="display: none;" name="questionWrapper">
+    <p>Takže koľko to mám rokov?</p>
+    <div class="form-options-date">
+        <input type="number" name="age"/> 
+    </div>
+</div>
+
+<div title="hobbies" style="display: none;" name="questionWrapper">
+    <p>Moje obľúbené činnosti?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Chodiť pešo"/> Chodiť pešo</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Tobogány" /> Tobogány</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Snowboard" /> Snowboard</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Šport" /> Šport</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Rozprávanie" /> Rozprávanie</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Hudba" /> Hudba</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="jessie" /> jessie</label>
+        </div>
+    </div>
+</div>
+
+<div title="car" style="display: none;" name="questionWrapper">
+    <p>Na akom aute sa vozím?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="car" value="Fiat Punto" /> Fiat Punto</label> <br>
+            <label><input type="radio" name="car" value="Ferrari Enzo" /> Ferrari Enzo</label> <br>
+            <label><input type="radio" name="car" value="Ford C-Max" /> Ford C-Max</label> <br>
+            <label><input type="radio" name="car" value="Ssang-Yong Korando" /> Ssang-Yong Korando</label> 
+        </div>
+    </div>
+</div>
+
+<div title="height" style="display: none;" name="questionWrapper">
+    <p>Aký vysoký som chlap?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="height" value="198" /> 198 cm</label> <br>
+            <label><input type="radio" name="height" value="190" /> 190 cm</label> <br>
+            <label><input type="radio" name="height" value="188" /> 188 cm</label> <br>
+            <label><input type="radio" name="height" value="193" /> 193 cm</label> 
+        </div>
+    </div>
+</div>
+
+<div title="favSport" style="display: none;" name="questionWrapper">
+    <p>Môj obľúbený šport?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="favSport" value="Futbal" /> Futbal</label> <br>
+            <label><input type="radio" name="favSport" value="Hokej" /> Hokej</label> <br>
+            <label><input type="radio" name="favSport" value="Bicyklovanie" /> Bicyklovanie</label> <br>
+            <label><input type="radio" name="favSport" value="Tenis" /> Tenis</label> <br>
+            <label><input type="radio" name="favSport" value="Hádzaná" /> Hádzaná</label> 
+        </div>
+    </div>
+</div>
+
+<div title="hasSeenParentsFirst" style="display: none;" name="questionWrapper">
+    <p>Stretol som ako prvý budúcich svokrovcov?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="hasSeenParentsFirst" value=1 /> Áno</label> <br>
+            <label><input type="radio" name="hasSeenParentsFirst" value=0 /> Nie</label> 
+        </div>
+    </div>
+</div>

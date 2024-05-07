@@ -1,0 +1,79 @@
+
+.collection-wrapper {
+  position: fixed;
+  display: flex;
+}
+
+.oblacik {
+  position: absolute;
+  top: -12vw;
+  justify-content: center;
+  display: flex;
+  visibility: hidden;
+
+  animation-name: oblacik-show;
+  animation-duration: 2s;
+}
+
+.oblacik-text { 
+  position: absolute;
+  top: 1vh;
+  text-align: center;
+  font-family: lobster;
+  font-size: 2vw;
+}
+
+.person {
+  width: 12vw;
+  height: auto;
+  transition: width 0.5s;
+
+  animation-name: person-zoom;
+  animation-duration: 2s;
+}
+
+.person:hover {
+  width: 14vw;
+}
+
+.collection-wrapper:hover .oblacik {
+  visibility: visible;
+}
+
+.hidden-button {
+  cursor: pointer; 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  background: none; 
+  border: none;
+}
+
+.left-side {
+  transform: scaleX(-1);
+  right: -11.5vw;
+}
+
+.right-side {
+  left: -11.5vw;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes oblacik-show {
+  50% { visibility: visible; }
+  100% { visibility: hidden; }
+}
+
+@keyframes person-zoom {
+  50% { width: 14vw; }
+  100% { width: 12vw; }
+}

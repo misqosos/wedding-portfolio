@@ -1,0 +1,103 @@
+<div title="surname" name="questionWrapper">
+    <p>Ako sa volám priezviskom?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="surname" value="Kováčová"/> Kováčová</label> <br>
+            <label><input type="radio" name="surname" value="Fidorková" /> Fidorková</label> <br>
+            <label><input type="radio" name="surname" value="Kaštanová" /> Kaštanová</label> <br>
+            <label><input type="radio" name="surname" value="Fedorková" /> Fedorková</label> <br>
+            <label><input type="radio" name="surname" value="Stolárová" /> Stolárová</label> 
+        </div>
+    </div>
+</div>
+
+<div title="dob" style="display: none;" name="questionWrapper">
+    <p>Kedy som sa narodila?</p> 
+    <div class="form-options-date">
+        <input id="day" type="number" name="dob" placeholder="Deň"/> . 
+        <input id="month" type="number" name="dob" placeholder="Mesiac"/> . 
+        <input id="year" type="number" name="dob" placeholder="Rok"/> 
+    </div>
+</div>
+
+<div title="email" style="display: none;" name="questionWrapper">
+    <p>Kam mi môžeš napísať e-mailík?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="email" value="jessiesponka@gmail.com" /> jessiesponka&#64;gmail.com</label> <br>
+            <label><input type="radio" name="email" value="fedorkova487@zoznam.sk" /> fedorkova487&#64;zoznam.sk</label> <br>
+            <label><input type="radio" name="email" value="dominika.fedorkova1@gmail.com" /> dominika.fedorkova1&#64;gmail.com</label> <br>
+            <label><input type="radio" name="email" value="dominicQa19@azet.sk" /> dominicQa19&#64;azet.sk</label> <br>
+            <label><input type="radio" name="email" value="maledievcatko@centrum.sk" /> maledievcatko&#64;centrum.sk</label> 
+        </div>
+    </div>
+</div>
+
+<div title="age" style="display: none;" name="questionWrapper">
+    <p>Takže koľko to mám rokov?</p>
+    <div class="form-options-date">
+        <input type="number" name="age"/> 
+    </div>
+</div>
+
+<div title="hobbies" style="display: none;" name="questionWrapper">
+    <p>Moje obľúbené činnosti?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Pečenie"/> Pečenie</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Tobogány" /> Tobogány</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Snowboard" /> Snowboard</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Túry" /> Túry</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Rozprávanie" /> Rozprávanie</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="Chodenie po obchodoch" /> Chodenie po obchodoch</label> <br>
+            <label><input type="checkbox" name="hobbies" onchange="addToArray(event, 'hobbies')" value="woody" /> woody</label>
+        </div>
+    </div>
+</div>
+
+<div title="hairColor" style="display: none;" name="questionWrapper">
+    <p>Farba mojich nádherných vláskov?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="hairColor" value="Blond" /> Blond</label> <br>
+            <label><input type="radio" name="hairColor" value="Hnedá" /> Hnedá</label> <br>
+            <label><input type="radio" name="hairColor" value="Čierna" /> Čierna</label> <br>
+            <label><input type="radio" name="hairColor" value="Červená" /> Červená</label> 
+        </div>
+    </div>
+</div>
+
+<div title="height" style="display: none;" name="questionWrapper">
+    <p>Aký vysoký som krpec?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="height" value="158" /> 158 cm</label> <br>
+            <label><input type="radio" name="height" value="150" /> 150 cm</label> <br>
+            <label><input type="radio" name="height" value="168" /> 168 cm</label> <br>
+            <label><input type="radio" name="height" value="163" /> 163 cm</label> 
+        </div>
+    </div>
+</div>
+
+<div title="favColor" style="display: none;" name="questionWrapper">
+    <p>Moja obľúbená farba?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="favColor" value="Hnedá" /> Hnedá</label> <br>
+            <label><input type="radio" name="favColor" value="Ružová" /> Ružová</label> <br>
+            <label><input type="radio" name="favColor" value="Čierna" /> Čierna</label> <br>
+            <label><input type="radio" name="favColor" value="Žltá" /> Žltá</label> <br>
+            <label><input type="radio" name="favColor" value="Červená" /> Červená</label> 
+        </div>
+    </div>
+</div>
+
+<div title="sentFirstMessage" style="display: none;" name="questionWrapper">
+    <p>Napísala som môjmu milému<br> ako prvá?</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="form-options-radio">
+            <label><input type="radio" name="sentFirstMessage" value=1 /> Áno</label> <br>
+            <label><input type="radio" name="sentFirstMessage" value=0 /> Nie</label> 
+        </div>
+    </div>
+</div>

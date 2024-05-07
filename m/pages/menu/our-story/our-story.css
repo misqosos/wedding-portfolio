@@ -1,0 +1,49 @@
+.main-view {
+    width: 100%; 
+    height: 100%;
+    margin-top: 7vh;
+    top: 0; 
+    left: 0; 
+    position: fixed; 
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.main-title {
+    position: relative;
+    font-size: 5vh;
+    color: rgb(218, 98, 12);
+    font-family: lobster;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    text-decoration: underline rgb(218, 98, 12);
+}
+
+.story-text {
+    position: relative;
+    margin-top: 5vh;
+    font-size: 3vh;
+    font-family: lobster;
+    line-height: 4vh;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    margin-bottom: 10vh;
+}
+
+.image-together {
+    width: 20vh;
+    height: auto;
+    position: absolute;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 5px 5px;
+    opacity: 0.4;
+}
+
+.image-left {
+    top: 60vh; left: 17vw; rotate: -10deg;
+}
+
+.image-right {
+    top: 20vh; right: 17vw; rotate: 10deg;
+}
