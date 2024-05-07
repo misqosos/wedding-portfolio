@@ -58,9 +58,6 @@
 </style>
 
 <div class="gate-view">
-        <p class="hint">
-            Heslo je text <br> hneď nad dátumom svadby <br> na pozvánke (spolu bez medzier)
-        </p>
     <img src="../assets/images/frame.png" alt="ram" class="ram">
     <form action="/m/index.php" method="post" style="text-align: center; position: relative;">
         <input type="text" name="pass"><br>

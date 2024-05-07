@@ -61,9 +61,6 @@
 <div class="gate-view">
     <img src="assets/images/frame.png" alt="ram" class="ram">
     <form action="/index.php" method="post" style="text-align: center; position: relative;">
-        <p style="font-size: 1vw; font-family: inherit;">
-            Heslo je názov Vašej spoločnosti <br> (bez diakritiky, malé písmená, spolu bez medzier)
-        </p>
         <input type="text" name="pass"><br>
         <button type="submit" class="submit-button">Potvrdiť</button>
     </form>
