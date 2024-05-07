@@ -13,18 +13,18 @@ templateFormData = {};
 form = {
   personName: this.person.dbRowDistinction,
   id: null,
-  surname: null,
+  make: null,
   dob: null,
   meetingPlace: null,
   age: null,
   hobbies: null,
-  car: null,
+  owner: null,
   height: null,
   favSport: null,
   hasSeenParentsFirst: null,
   favColor: null,
-  email: null,
-  sentFirstMessage: null,
+  shop: null,
+  playedOtherMovie: null,
   hairColor: null,
   isAllCorrect: null
 }

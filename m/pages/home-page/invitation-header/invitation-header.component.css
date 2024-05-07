@@ -29,6 +29,8 @@
     line-height: 6vh;
     color: rgb(218, 98, 12);
     -webkit-text-stroke-width: 0.5px;
+    margin-left: 4vw;
+    margin-right: 4vw;
 }
 
 .details-invitation-header {

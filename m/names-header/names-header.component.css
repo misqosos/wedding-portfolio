@@ -49,6 +49,7 @@
 
 .title-names-header p {
     margin: 0;
+    margin-bottom: 1vh;
     padding: 0;
     font-family: 'Lobster';
     font-size: 4vh;

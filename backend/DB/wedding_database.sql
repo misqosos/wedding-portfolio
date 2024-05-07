@@ -2,52 +2,53 @@
 CREATE TABLE `person`(
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `personName` VARCHAR(200),
-  `surname` VARCHAR(200),
+  `make` VARCHAR(200),
   `dob` DATE,
   `meetingPlace` VARCHAR(200),
   `age` DECIMAL(10, 0),
   `hobbies` VARCHAR(200),
-  `car` VARCHAR(200),
+  `owner` VARCHAR(200),
   `height` INT(10),
   `favSport` VARCHAR(200),
   `hasSeenParentsFirst` BOOLEAN,
-  `sentFirstMessage` BOOLEAN,
+  `playedOtherMovie` BOOLEAN,
   `favColor` VARCHAR(200),
   `hairColor` VARCHAR(200),
-  `email` VARCHAR(200),
+  `shop` VARCHAR(200),
   `isAllCorrect` BOOLEAN,
   PRIMARY KEY(`id`)
 );
 
+DROP TABLE IF EXISTS `dishes`;
 CREATE TABLE `dishes`(
   id VARCHAR(200) PRIMARY KEY,
   lunch VARCHAR(200)
 );
 
-INSERT INTO person (personName, surname, dob, email, age, hobbies, hairColor, height, favColor, sentFirstMessage, isAllCorrect) VALUES (
+INSERT INTO person (personName, make, dob, shop, age, hobbies, hairColor, height, favColor, playedOtherMovie, isAllCorrect) VALUES (
   'jessie',
-  'Fedorková',
-  "1996-07-19",
-  "dominika.fedorkova1@gmail.com",
-  27,
-  '["Pečenie", "Túry", "Rozprávanie", "woody"]',
-  "Blond",
-  163,
+  'Drevo',
+  "1999-11-24",
+  "Hračkárstvo snov",
+  24,
+  '["Hranie", "Woody", "Dobrodružstvo"]',
+  "Červená",
+  10,
   "Žltá",
   0,
   1
 );
 
-INSERT INTO person (personName, surname, dob, meetingPlace, age, hobbies, car, height, favSport, hasSeenParentsFirst, isAllCorrect) VALUES (
+INSERT INTO person (personName, make, dob, meetingPlace, age, hobbies, owner, height, favSport, hasSeenParentsFirst, isAllCorrect) VALUES (
   'woody',
-  'Drotár',
-  "1996-07-26",
-  "Zoznamka",
-  27,
-  '["Šport", "Hudba", "Chodiť pešo", "jessie"]',
-  "Ford C-Max",
-  193,
-  "Hokej",
+  'Drevo',
+  "1995-11-22",
+  "E-shp",
+  28,
+  '["Pivo s Buzzlightyearom", "Hranie", "Dobrodružstvo", "Jessie"]',
+  "Andy",
+  15,
+  "Futbal",
   1,
   1
 );
