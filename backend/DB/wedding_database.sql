@@ -43,7 +43,7 @@ INSERT INTO person (personName, make, dob, meetingPlace, age, hobbies, owner, he
   'woody',
   'Drevo',
   "1995-11-22",
-  "E-shp",
+  "E-shop",
   28,
   '["Pivo s Buzzlightyearom", "Hranie", "Dobrodružstvo", "Jessie"]',
   "Andy",
