@@ -75,7 +75,7 @@
             
             $this->personName =  $person->personName;
             $this->make =  $person->make;
-            $this->dob =  $person->dob[2]."-".$person->dob[1]."-".$person->dob[0] ?: "0000-00-00";
+            $this->dob =  $person->dob[2] == '' || $person->dob[1] == '' || $person->dob[0] == '' ? "0000-00-00" : $person->dob[2]."-".$person->dob[1]."-".$person->dob[0];
             $this->shop =  $person->shop;
             $this->age =  $person->age;
             $this->hobbies =  json_encode($person->hobbies);
