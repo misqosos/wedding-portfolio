@@ -13,6 +13,6 @@ function postPerson(formular) {
         method: "POST",
         body: JSON.stringify(formular)
     })
-        .then((response) => {console.log(response.json())})
-        .then((json) => console.log(json));
+        .then((response) => {response.json()})
+        .then((json) => json);
 }
