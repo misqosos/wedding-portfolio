@@ -23,7 +23,7 @@
         public function __construct() {}
 
         function postPerson($person){
-            $sql = 'INSERT INTO wedding.person (
+            $sql = 'INSERT INTO person (
                 personName,
                 make, 
                 dob, 
@@ -75,7 +75,6 @@
             
             $this->personName =  $person->personName;
             $this->make =  $person->make;
-            // hodnoty dob normalne chodia
             $this->dob =  $person->dob[0]."-".$person->dob[1]."-".$person->dob[2];
             $this->shop =  $person->shop;
             $this->age =  $person->age;
@@ -102,7 +101,7 @@
         } 
 
         function getCorrectPerson($name){
-            $sql = 'SELECT * FROM d40089_wedding.person WHERE personName = :personName AND isAllCorrect = 1 ORDER BY id ASC LIMIT 1';
+            $sql = 'SELECT * FROM person WHERE personName = :personName AND isAllCorrect = 1 ORDER BY id ASC LIMIT 1';
             
             $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
 
@@ -116,7 +115,7 @@
         }
 
         function getPostedRecord($name){
-            $sql = 'SELECT * FROM d40089_wedding.person WHERE personName = :personName ORDER BY id DESC LIMIT 1';
+            $sql = 'SELECT * FROM person WHERE personName = :personName ORDER BY id DESC LIMIT 1';
             
             $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
 

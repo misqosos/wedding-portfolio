@@ -17,7 +17,7 @@
 <?php
 function checkPost($pass) {
   if (isset($pass)) {
-    $sql = 'SELECT * FROM d40089_wedding.dishes WHERE lunch = :lunch';
+    $sql = 'SELECT * FROM dishes WHERE lunch = :lunch';
         
     $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
 
@@ -41,7 +41,7 @@ function checkPost($pass) {
 
 function checkCookie($pass) {
   if (isset($pass)) {
-    $sql = 'SELECT * FROM d40089_wedding.dishes WHERE id = :lunch';
+    $sql = 'SELECT * FROM dishes WHERE id = :lunch';
         
     $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
 
