@@ -41,11 +41,11 @@
         if (isset($_POST["uploadPhotos"]) && isset($_FILES["filesToUpload"])) {
             for ($i=0; $i < count($_FILES["filesToUpload"]["name"]); $i++) { 
 
-                $target_file = $target_dir . basename($_FILES["filesToUpload"]["name"][$i]);
+                $target_file = $target_dir . uniqid{} . basename($_FILES["filesToUpload"]["name"][$i]);
 
                 // Check if file already exists
                 if (file_exists($target_file)) {
-                    $target_file = $target_dir . "copy-" . basename($_FILES["filesToUpload"]["name"][$i]);
+                    $target_file = $target_dir . uniqid{} . basename($_FILES["filesToUpload"]["name"][$i]);
                 }
 
                 if (move_uploaded_file($_FILES["filesToUpload"]["tmp_name"][$i], $target_file)) {
