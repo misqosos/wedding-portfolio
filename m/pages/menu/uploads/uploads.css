@@ -1,7 +1,6 @@
 .main-view {
     width: 100%; 
     height: 100%;
-    margin-top: 7vh;
     top: 0; 
     left: 0; 
     position: fixed; 
@@ -47,7 +46,7 @@
   }
 
   .highlighted-image img {
-    width: 100%;
+    width: auto;
     height: 100%;
   }
   
@@ -80,6 +79,7 @@
     text-align: center;
     font-family: lobster;
     font-size: 5vh;
+    margin-top: 8vh;
     margin-bottom: 5vh;
     text-decoration: underline;
   }
