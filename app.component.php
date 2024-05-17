@@ -4,7 +4,7 @@
         include("app.component.css");
     ?>
 </style>
-<div class="border-app">
+<div id="border-app" class="border-app">
     <img src="assets/images/flower.png" alt="Flower" class="flower-app top-left-app">
     <img src="assets/images/flower.png" alt="Flower" class="flower-app top-right-app">
 </div>
