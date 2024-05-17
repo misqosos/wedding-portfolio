@@ -11,6 +11,7 @@
         $ourStoryPath = "/nas-pribeh";
         $logisticsPath = "/doprava";
         $gamesPath = "/hry";
+        $uploadsPath = "/fotky";
         
         $showGamesOption = true;
 

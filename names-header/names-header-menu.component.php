@@ -8,6 +8,11 @@
     </li>
     <li>
         <label class="option-decor">&#9825;&nbsp;
+            <a href="<?php echo $uploadsPath ?>">Vaše nahrané fotky</a>
+        &nbsp;&#9825;</label>
+    </li>
+    <li>
+        <label class="option-decor">&#9825;&nbsp;
             <a href="<?php echo $ourStoryPath ?>">Náš príbeh</a>
         &nbsp;&#9825;</label>
     </li>

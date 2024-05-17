@@ -31,6 +31,10 @@
     route(''.$base.'hry', function () {
         include("pages/menu/games/games.php");
     });
+    
+    route(''.$base.'fotky', function () {
+        include("pages/menu/uploads/uploads.php");
+    });
     // <-
     
     route('/404', function () {

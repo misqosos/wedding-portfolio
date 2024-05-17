@@ -1,0 +1,85 @@
+.main-view {
+    width: 100%; 
+    height: 100%;
+    margin-top: 7vw;
+    top: 0; 
+    left: 0; 
+    position: fixed; 
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: auto;
+}
+  /* The grid: Four equal columns that floats next to each other */
+  .gallery-column {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  /* Style the images inside the grid */
+  .gallery-column img {
+    opacity: 0.8;
+    width: inherit; 
+    cursor: pointer; 
+  }
+  
+  .gallery-column img:hover {
+    opacity: 1;
+  }
+
+  .gallery-row {
+    margin-bottom: 10vw;
+    display: grid;
+    grid-template-columns: repeat(4, calc(25%));
+  }
+  
+  /* The expanding image container */
+  .highlighted-image {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .highlighted-image img {
+    width: 50%;
+    height: auto;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 1vw;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 3vw;
+    right: 3vw;
+    color: black;
+    font-size: 5vw;
+    cursor: pointer;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-title {
+    text-align: center;
+    font-family: lobster;
+    font-size: 5vw;
+    margin-bottom: 5vw;
+    text-decoration: underline;
+  }
