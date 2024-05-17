@@ -19,7 +19,7 @@
     <div id="gallery-row" class="gallery-row">
         <?php foreach( $images as $image ): ?>
         <div class="gallery-column">
-            <img src="<?php echo $image ?>" alt="zobrazenie nefunguje len na mobile, usilovne sa na tom pracuje" onclick="openImage(this);">
+            <img src="<?php echo $image ?>" alt="'zobrazenie nefunguje len na mobile, usilovne sa na tom pracuje'" onclick="openImage(this);">
         </div>
         <?php endforeach; ?>
     </div>
