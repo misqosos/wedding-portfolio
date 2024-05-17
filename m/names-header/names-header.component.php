@@ -9,6 +9,7 @@
         $homePath = "/m";
         $ourStoryPath = "/m/nas-pribeh";
         $logisticsPath = "/m/doprava";
+        $uploadsPath = "/m/fotky";
         
         $showGamesOption = false;
 
