@@ -45,7 +45,7 @@
         now.getMinutes() == this.weddingDate.getMinutes() &&
         now.getSeconds() == this.weddingDate.getSeconds()) 
       {
-        this.nextMonthCountdown = new Date(this.now.getFullYear(), this.now.getMonth() + 1, this.weddingDate.getDate(), this.weddingDate.getHours()+1, this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds())
+        this.nextMonthCountdown = new Date(this.now.getFullYear(), this.now.getMonth() + 1, this.weddingDate.getDate(), this.weddingDate.getHours(), this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds())
         this.monthsLeft -= 1;
         console.log('dalsi mesiac',this.nextMonthCountdown)
       }
