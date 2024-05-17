@@ -6,7 +6,7 @@
     </div>
 
     <?php
-        $dir_name = "../../../../fotky/";
+        $dir_name = "../fotky";
         $images = glob($dir_name."*");
     ?>
     
