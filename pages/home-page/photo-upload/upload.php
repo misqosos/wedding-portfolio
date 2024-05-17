@@ -6,6 +6,6 @@
 </style>
 <?php
     $actionPath = "/home";
-    $targetDirPath = "../fotky/";
+    $targetDirPath = "pages/home-page/photo-upload/photos/";
     include("upload-wo-css.php");
 ?>
