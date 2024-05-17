@@ -10,8 +10,7 @@
 }
   /* The grid: Four equal columns that floats next to each other */
   .gallery-column {
-    width: 100%;
-    position: relative;  
+    width: 100%; 
     height: auto;
     text-align: center;
   }
@@ -19,8 +18,7 @@
   /* Style the images inside the grid */
   .gallery-column img {
     opacity: 0.8;
-    width: auto; 
-    height: 100%; 
+    width: inherit; 
     cursor: pointer; 
   }
   
