@@ -1,0 +1,70 @@
+
+.frame-upload {
+    font-family: 'Lobster';
+    -webkit-text-stroke-color: black;
+    position: fixed;
+    top: 10vh; 
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button-wrapper {
+    width: max-content;
+    height: auto;
+}
+
+.add-button {
+    width: max-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.hidden-add-button {
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .fa-camera-retro {
+    position: relative; 
+    font-size: 10vh;
+  }
+
+  .upload-image-info {
+    text-align: center;
+    font-size: 1.5vh;
+  }
+
+.upload-button {
+  background-color: black;
+  border-radius: 1.5vh;
+  border-style: solid;
+  color: white;
+  cursor: pointer;
+  font-family: 'Lobster';
+  font-size: 2.5vh;
+  height: auto;
+  padding: 2vh;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-top: 0;
+}
+
+.upload-button:hover,
+.upload-button:focus {
+  background-color: white;
+  color: olive;
+}
