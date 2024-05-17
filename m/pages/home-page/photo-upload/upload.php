@@ -7,6 +7,6 @@
 
 <?php 
     $actionPath = "/m/home";
-    $targetDirPath = "../m/pages/home-page/photo-upload/photos/";
+    $targetDirPath = "../../../fotky/";
     include("../pages/home-page/photo-upload/upload-wo-css.php"); 
 ?>
