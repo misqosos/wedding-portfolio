@@ -12,6 +12,8 @@
     header('Location: /');
     exit;
   }
+
+  $isHome = $_SERVER["REQUEST_URI"] == "/m/home" ? true : false;
 ?>
 
 <?php
@@ -76,7 +78,7 @@ include("../access/access.php");
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
+  <body <?php if($access && $isHome) { echo ' onload="hideUploadInfo()" '; } if($access) { echo ' onclick="hideMenu()" '; } ?> >
   <?php 
     if ($access) { include("app.component.php"); } 
     else { include("pages/gate/gate.php"); }

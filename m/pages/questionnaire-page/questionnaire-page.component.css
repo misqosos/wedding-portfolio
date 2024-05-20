@@ -55,6 +55,7 @@
   transition: color 0.3s;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
+  border-style: dashed;
   margin-top: 2vh;
 }
 
