@@ -6,10 +6,20 @@
     </div>
 
     <?php
-        $dir_name = $directory;
-        $images = glob($dir_name."*");
+        //delete inapp files 
+        $images = glob($showFromDirectory."*");
+        array_map('unlink', $images);
+
+        //fetch from outer folder
+        $images = glob($copyFromDirectory."*");
+
+        foreach( $images as $image ) {
+            copy($image, $showFromDirectory . basename($image));
+        }
+
+        $images = glob($showFromDirectory."*");
     ?>
-    
+
     <?php if (empty($images)) : ?>
         <div style="text-align: center;">
             Žiadne fotky
@@ -19,7 +29,7 @@
     <div id="gallery-row" class="gallery-row">
         <?php foreach( $images as $image ): ?>
         <div class="gallery-column">
-            <img src="<?php echo $image ?>" alt="zobrazenienefungujelennamobileusilovnesanatompracuje" onclick="openImage(this);">
+            <img src="<?php echo $image ?>" alt="photo" onclick="openImage(this);">
         </div>
         <?php endforeach; ?>
     </div>
