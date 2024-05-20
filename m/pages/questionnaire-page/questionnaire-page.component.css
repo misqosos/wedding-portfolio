@@ -54,6 +54,7 @@
   cursor: pointer;
   color: rgb(218, 98, 12);
   transition: color 0.3s;
+  margin-top: 2vh;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
