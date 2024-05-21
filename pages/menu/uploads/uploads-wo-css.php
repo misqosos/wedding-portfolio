@@ -6,6 +6,7 @@
     </div>
 
     <?php
+
         //delete inapp files 
         $images = glob($showFromDirectory."*");
         array_map('unlink', $images);
@@ -18,6 +19,15 @@
         }
 
         $images = glob($showFromDirectory."*");
+
+        function iterateImages ($image) {
+            $videoExts = array("mov", "mp4", "avi", "wmv", "avchd", "webm", "flv", "3gp");
+            if( in_array(strtolower(pathinfo($image, PATHINFO_EXTENSION)), $videoExts) ) {
+                echo '<video controls> <source src="'.$image.'" type="video/mp4"> </video>';
+            } else {
+                echo '<img src="'.$image.'" alt="photo" onclick="openImage(this);">';
+            }
+        }
     ?>
 
     <?php if (empty($images)) : ?>
@@ -26,12 +36,16 @@
         </div>
     <?php endif; ?>
 
-    <div id="gallery-row" class="gallery-row">
-        <?php foreach( $images as $image ): ?>
-        <div class="gallery-column">
-            <img src="<?php echo $image ?>" alt="photo" onclick="openImage(this);">
-        </div>
-        <?php endforeach; ?>
+    <div id="gallery-wrapper" class="gallery-wrapper">
+        <?php for ($i=0; $i < $numOfGalleryColumns; $i++) : ?>
+            <div class="gallery-column">
+                <?php
+                    for ($j=$i; $j < count($images); $j+=$numOfGalleryColumns) { 
+                        iterateImages($images[$j]);    
+                    }
+                ?>
+            </div>
+        <?php endfor; ?>        
     </div>
 
     <div id="highlighted-image" class="highlighted-image">
@@ -49,7 +63,7 @@
                 document.getElementById("home-button").style.display = 'none'; 
             }
             document.getElementById("border-app").style.opacity = 0.5;
-            document.getElementById("gallery-row").style.opacity = 0.5;
+            document.getElementById("gallery-wrapper").style.opacity = 0.5;
             var expandImg = document.getElementById("expandedImg");
             var imgText = document.getElementById("imgtext");
             expandImg.src = imgs.src;
@@ -64,7 +78,7 @@
                 document.getElementById("home-button").style.display = 'flex';   
             }
             document.getElementById("border-app").style.opacity = 1;
-            document.getElementById("gallery-row").style.opacity = 1;
+            document.getElementById("gallery-wrapper").style.opacity = 1;
         }
     </script>
 
