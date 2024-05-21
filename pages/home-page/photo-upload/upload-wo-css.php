@@ -11,7 +11,10 @@
         </div>
 
         <div id="uploadButtonWrapper" style="display: none;">
-            <input id="uploadButton" class="upload-button" type="submit" name="uploadPhotos">
+            <div class="upload-button" id="spinner" style="display: none;">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            </div>
+            <input id="uploadButton" class="upload-button" type="submit" name="uploadPhotos" onclick="showLoading()">
         </div>
     </form>
 </div>
@@ -21,6 +24,11 @@
         setTimeout(() => {
             document.getElementById("uploadInfo").style.display = 'none';
         }, 5000);
+    }
+
+    function showLoading(){
+        document.getElementById("uploadButton").style.display = 'none';
+        document.getElementById("spinner").style.display = 'block';
     }
 
     function checkFiles(){
