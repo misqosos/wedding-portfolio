@@ -7,20 +7,20 @@
 		margin-bottom: 5vw;
     }
     .start-button {
-        font-family: lobster;
+        font-family: var(--fontFamily);
         font-size: 6vw;
-        color: rgb(218, 98, 12);
+        color: var(--invitationHeaderColor);
         position: absolute;
-        background: rgb(255, 253, 147);
+        background: var(--backgroundColor);
         cursor: pointer;
     }
     .start-button:hover {
-        background: rgb(255, 253, 100);
+        background: var(--startButtonHoverColor);
     }
     .winner-info {
         font-size: 4vw;
         color: skyblue;
-        font-family: lobster;
+        font-family: var(--fontFamily);
         top: 13vw;
         position: absolute;
         display: none;
@@ -101,8 +101,8 @@ const block = {
 }
 
 function graphics(){
-	drawRect(0, 0, cvs.width, cvs.height, "rgb(255, 253, 147)", 4);
-	drawRect(paddle.x, paddle.y, paddle.w, paddle.h, "rgb(218, 98, 12)", 1);
+	drawRect(0, 0, cvs.width, cvs.height, 'rgb(255, 253, 147)', 4);
+	drawRect(paddle.x, paddle.y, paddle.w, paddle.h, 'rgb(218, 98, 12)', 1);
 	drawCircle(ball.x, ball.y, ball.r, "slateblue");
 }
 

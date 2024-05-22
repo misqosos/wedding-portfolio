@@ -1,16 +1,16 @@
 
 .count-down-timer {
-  background-color: rgb(255, 253, 147);
+  background-color: var(--backgroundColor);
   box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 15%);
   text-align: center;
   width: 88vw;
   height: 42vh;
   margin: 0 auto;
-  color: #d9a74a;
+  color: var(--borderColor);
   border-radius: 6px 6px 0px 0px;
   padding: 0 auto;
-  font-family: 'Lobster';
-  font-size: 2vh;
+  font-family: var(--fontFamily);
+  font-size: 3vh;
   word-spacing: 0.5vh;
   position: fixed;
   left: 0;
@@ -44,7 +44,7 @@
 
 .description > p {
   margin-bottom: 2vh;
-  font: normal 2vh lobster;
+  font: normal 3vh var(--fontFamily);
   margin: 0;
   margin-bottom: 1vh;
 }
@@ -62,8 +62,8 @@
 .times p {
   letter-spacing: 0;
   position: relative;
-  margin: 0;
-  font: normal 5vh lobster;
+  margin: -1.5vh;
+  font: normal 6vh var(--fontFamily);
 }
 
 @media screen and (max-width: 8vh) {

@@ -35,7 +35,7 @@
     }
 
     .game-title {
-        font-family: lobster;
+        font-family: var(--fontFamily);
         font-size: 2vw;
         margin: 0;
         position: absolute;

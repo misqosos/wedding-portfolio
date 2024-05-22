@@ -1,14 +1,14 @@
 .count-down-timer {
-    background-color: rgb(255, 253, 147);
+    background-color: var(--backgroundColor);
     box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 15%);
     text-align: center;
     width: 50vw;
     margin: 0 auto;
-    color: #d9a74a;
+    color: var(--borderColor);
     border-radius: 6px 6px 0px 0px;
     padding: 0 auto;
-    font-family: 'Lobster';
-    font-size: 2vw;
+    font-family: var(--fontFamily);
+    font-size: 3vw;
     word-spacing: 0.5vw;
     position: fixed;
     left: 0;
@@ -39,26 +39,16 @@
   
   .description > p {
     margin-bottom: 2vw;
-    font: normal 2vw lobster;
+    font: normal 3vw var(--fontFamily);
     margin: 0;
     margin-bottom: 1vw;
-  }
-  
-  .times p ::ng-deep img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8vw;
-    display: block;
-    height: 30px;
   }
   
   .times p {
     letter-spacing: 0;
     position: relative;
-    margin: 0;
-    font: normal 7vw lobster;
+    margin: -2vw;
+    font: normal 8vw var(--fontFamily);
   }
   
   @media screen and (max-width: 8vw) {

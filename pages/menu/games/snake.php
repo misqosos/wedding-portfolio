@@ -10,15 +10,15 @@
 		margin-bottom: 5vw;
 	}
     .start-button {
-        font-family: lobster;
+        font-family: var(--fontFamily);
         font-size: 6vw;
-        color: rgb(218, 98, 12);
+        color: var(--invitationHeaderColor);
         position: absolute;
-        background: rgb(255, 253, 147);
+        background: var(--backgroundColor);
         cursor: pointer;
     }
     .start-button:hover {
-        background: rgb(255, 253, 100);
+        background: var(--startButtonHoverColor);
     }
     .move-info {
         font-size: 6vw;
@@ -51,7 +51,7 @@
     </div>
 </div>
 <div class="score-wrapper">
-	<p id="vypis" style="font-size: 1.5vw; font-family: lobster;"></p>
+	<p id="vypis" style="font-size: 1.5vw; font-family: var(--fontFamily);"></p>
 	<p id="vypis2"></p>
 </div>
 	

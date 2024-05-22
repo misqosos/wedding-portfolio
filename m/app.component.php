@@ -1,6 +1,7 @@
 
 <style type="text/css">
     <?php
+        include("../globals.css");
         include("app.component.css");
     ?>
 </style>

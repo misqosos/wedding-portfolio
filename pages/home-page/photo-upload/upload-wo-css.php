@@ -2,9 +2,12 @@
 <div class="frame-upload">  
     <form action="<?php echo $actionPath ?>" method="post" enctype="multipart/form-data" class="button-wrapper">
 
-        <div id="uploadInfo" class="upload-image-info">
-            <?php uploadImages($targetDirPath); ?>
-        </div>
+        <?php if(isset($_FILES["filesToUpload"])) : ?>
+            <div id="uploadInfo" class="upload-image-info">
+                <?php uploadImages($targetDirPath); ?>
+            </div>
+        <?php endif; ?>
+        
         <div class="add-button">
             <i class="fa fa-camera-retro" aria-hidden="true"></i>
             <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" class="hidden-add-button" onchange="checkFiles()">

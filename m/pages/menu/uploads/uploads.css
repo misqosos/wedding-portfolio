@@ -87,9 +87,8 @@
 
   .gallery-title {
     text-align: center;
-    font-family: lobster;
+    font-family: var(--fontFamily);
     font-size: 5vh;
     margin-top: 8vh;
     margin-bottom: 5vh;
-    text-decoration: underline;
   }

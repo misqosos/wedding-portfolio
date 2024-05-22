@@ -19,7 +19,7 @@
         font-size: 2vw;
         border-radius: 1vw;
         padding: 0.5vh 1vw;
-        font-family: 'Lobster';
+        font-family: var(--fontFamily);
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: black;
         text-align: center;
@@ -30,7 +30,7 @@
         border-style: solid;
         color: white;
         cursor: pointer;
-        font-family: 'Lobster';
+        font-family: var(--fontFamily);
         font-size: 2.5vw;
         height: auto;
         padding: 1vw;

@@ -1,9 +1,9 @@
 
 .frame-upload {
-    font-family: 'Lobster';
+    font-family: var(--fontFamily);
     -webkit-text-stroke-color: black;
     position: fixed;
-    top: 10vh; 
+    top: 13vh; 
     left: 0;
     right: 0;
     box-sizing: border-box;
@@ -51,7 +51,7 @@
   border-style: solid;
   color: white;
   cursor: pointer;
-  font-family: 'Lobster';
+  font-family: var(--fontFamily);
   font-size: 2.5vh;
   height: auto;
   padding: 2vh;

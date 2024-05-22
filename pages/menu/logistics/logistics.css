@@ -14,18 +14,17 @@
 .main-title {
     position: relative;
     font-size: 5vw;
-    color: rgb(218, 98, 12);
-    font-family: lobster;
+    color: var(--invitationHeaderColor);
+    font-family: var(--fontFamily);
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
-    text-decoration: underline rgb(218, 98, 12);
 }
 
 .info-text {
     position: relative;
     margin-top: 5vw;
-    font-size: 1.25vw;
-    font-family: lobster;
+    font-size: 2vw;
+    font-family: var(--fontFamily);
     line-height: 3vw;
     margin-left: 17vw;
     margin-right: 17vw;

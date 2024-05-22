@@ -10,9 +10,9 @@ body, html {
   left: 0; 
   width: 100%; 
   height: 100%;
-  border: 1vw solid #d9a74a; 
+  border: 1vw solid var(--borderColor); 
   box-sizing: border-box;
-  background-color: rgb(255, 253, 147);
+  background-color: var(--backgroundColor);
 }
 
 .flower-app {

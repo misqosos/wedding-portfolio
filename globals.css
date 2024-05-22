@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Italianno&family=Lobster&display=swap');
+:root {
+    
+    --borderColor: #d9a74a;
+    --backgroundColor: rgb(255, 253, 147);
+    --invitationHeaderColor: rgb(218, 98, 12);
+    --startButtonHoverColor: rgb(255, 253, 100);
+    --detailsOrHomeHoverColor: rgb(36, 184, 17);
+    --fontFamily: italianno;
+  }

@@ -1,6 +1,6 @@
 
 <div class="menu-wrapper-names-header" id="menu">
-    <p class="menu-title">Menu</p>
+    <div class="menu-title">Menu</div>
     <li>
         <label class="option-decor">&#9825;&nbsp;
             <a href="<?php echo $homePath ?>">Domov</a>
@@ -31,4 +31,4 @@
         &nbsp;&#9825;</label>
     </li>
 </div>
-<p>Jessie & Woody</p>
+<div class="names-in-header">Jessie & Woody</div>

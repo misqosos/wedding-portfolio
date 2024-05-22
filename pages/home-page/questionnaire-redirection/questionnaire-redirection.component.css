@@ -19,7 +19,7 @@
   position: absolute;
   top: 1vh;
   text-align: center;
-  font-family: lobster;
+  font-family: var(--fontFamily);
   font-size: 2vw;
 }
 

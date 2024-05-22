@@ -3,9 +3,9 @@
     position: absolute;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
-    background-color: rgb(255, 253, 147);
+    background-color: var(--backgroundColor);
     box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 15%);
-    width: 35vh;
+    width: 32vh;
     border-radius: 0px 0px 6vh 6vh;
     text-align: center;
     left: 0;
@@ -29,9 +29,9 @@
 
 .menu-wrapper-names-header a {
     text-decoration: none;
-    color: rgb(218, 98, 12);
-    font-family: 'Lobster';
-    font-size: 2.5vh;
+    color: var(--invitationHeaderColor);
+    font-family: var(--fontFamily);
+    font-size: 3vh;
     -webkit-text-stroke-width: 0.6px;
     -webkit-text-stroke-color: black;
     visibility: visible;
@@ -47,18 +47,19 @@
     visibility: visible;
 }
 
-.title-names-header p {
+.names-in-header {
     margin: 0;
-    margin-bottom: 1vh;
     padding: 0;
-    font-family: 'Lobster';
-    font-size: 4vh;
-    color: #d9a74a;
+    font-family: var(--fontFamily);
+    font-size: 5vh;
+    color: var(--borderColor);
 }
 
 .menu-title {
-    font-size: 4vh; 
-    margin-bottom: 1vh;
+    font-size: 5vh;
+    margin-top: 1vh;
+    font-family: var(--fontFamily);
+    color: var(--borderColor);
 }
 
 @keyframes header-slide {

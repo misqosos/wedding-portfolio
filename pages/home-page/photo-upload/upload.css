@@ -1,6 +1,6 @@
 
 .frame-upload {
-    font-family: 'Lobster';
+    font-family: var(--fontFamily);
     -webkit-text-stroke-color: black;
     position: fixed;
     top: 20vh; 
@@ -25,6 +25,11 @@
     align-items: center;
     width: auto;
     height: auto;
+    transition: color 0.3s;
+}
+
+.add-button:hover {
+    color: gray;
 }
 
 .hidden-add-button {
@@ -42,7 +47,8 @@
 
   .upload-image-info {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 4vw;
+    margin-bottom: -2vw;
   }
 
 .upload-button {
@@ -51,15 +57,13 @@
   border-style: solid;
   color: white;
   cursor: pointer;
-  font-family: 'Lobster';
-  font-size: 2.5vw;
+  font-family: var(--fontFamily);
+  font-size: 3vw;
   height: auto;
   padding: 2vw;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
   margin-top: 0;
 }
 
