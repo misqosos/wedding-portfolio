@@ -73,13 +73,12 @@
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 14vh;
-  height: 17vh;
+  height: auto;
   -webkit-text-stroke-width: 0.1vh;
   -webkit-text-stroke-color: black;
+  position: relative;
 }
 
 #slide-countdown {

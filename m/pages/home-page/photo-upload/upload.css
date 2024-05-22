@@ -42,7 +42,8 @@
 
   .upload-image-info {
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 4vh;
+    margin-bottom: -1.5vh;
   }
 
 .upload-button {
@@ -52,14 +53,12 @@
   color: white;
   cursor: pointer;
   font-family: var(--fontFamily);
-  font-size: 2.5vh;
+  font-size: 4vh;
   height: auto;
   padding: 2vh;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
   margin-top: 0;
 }
 
