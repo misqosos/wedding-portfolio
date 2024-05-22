@@ -11,11 +11,11 @@
         include("pages/home-page/home.php");
     });
     
-    route(''.$base.'jessie', function () {
+    route(''.$base.$GLOBALS["woman"], function () {
         include("pages/questionnaire-page/questionnaire.php");
     });
     
-    route(''.$base.'woody', function () {
+    route(''.$base.$GLOBALS["man"], function () {
         include("pages/questionnaire-page/questionnaire.php");
     });
     

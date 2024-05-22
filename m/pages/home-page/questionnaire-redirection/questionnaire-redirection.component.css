@@ -23,6 +23,11 @@
   font-size: 2vh;
 }
 
+.oblacik-image {
+  width: 15vh; 
+  height: auto;
+}
+
 .person {
   width: 14vh;
   height: auto;

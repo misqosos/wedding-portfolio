@@ -1,4 +1,6 @@
 <?php
+  $GLOBALS["man"] = "woody";
+  $GLOBALS["woman"] = "jessie";
   include("backend/database.class.php");
 ?>
 <?php
