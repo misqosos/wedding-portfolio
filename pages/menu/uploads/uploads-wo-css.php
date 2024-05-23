@@ -57,6 +57,31 @@
     </div>
 
     <script>
+        isVideoReady();
+        function isVideoReady(){
+            var videos = document.getElementsByTagName("video");
+            var readyStates = new Map();
+            var allVideosReady = false;
+
+            [...videos].map(video => readyStates.set(video, video.readyState));
+
+            videoLoad = setInterval(() => {
+                for (let index = 0; index < videos.length; index++) {
+                    const video = videos[index];
+                    readyStates.set(video, video.readyState);
+                    allVideosReady = readyStates.values().every(state => state == 4);
+
+                    if (!allVideosReady) {
+                        video.load();
+                    } else {
+                        clearInterval(videoLoad);
+                        console.log("all videos ready");
+                        break; 
+                    }
+                }
+            }, 5000); 
+        }
+        
         function openImage(imgs) {
             document.getElementById("slide-names-header").style.display = 'none';
             if (document.getElementById("home-button")) {
