@@ -9,4 +9,5 @@
     $pathToForm = "../pages/questionnaire-page/forms/$personName-form.html";
 
     include("../pages/questionnaire-page/questionnaire-page-template-wo-css.php");
+    include("../components/home-button-m.html");
 ?>
