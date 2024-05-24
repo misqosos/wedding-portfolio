@@ -25,9 +25,11 @@
 <script>
     hideUploadInfo();
     function hideUploadInfo(){
-        setTimeout(() => {
-            document.getElementById("uploadInfo").style.display = 'none';
-        }, 5000);
+        if (document.getElementById("uploadInfo")) {
+            setTimeout(() => {
+                document.getElementById("uploadInfo").style.display = 'none';
+            }, 5000);
+        }
     }
 
     function showLoading(){
