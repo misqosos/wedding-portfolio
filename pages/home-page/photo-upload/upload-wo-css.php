@@ -23,6 +23,7 @@
 </div>
 
 <script>
+    hideUploadInfo();
     function hideUploadInfo(){
         setTimeout(() => {
             document.getElementById("uploadInfo").style.display = 'none';
