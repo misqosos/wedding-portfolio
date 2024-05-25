@@ -66,22 +66,6 @@ function checkCookie($pass) {
   }
 }
 
-function noteVisit() {
-  $sql = 'INSERT INTO visits (name, timestamp) VALUES (:name, :timestamp)';
-      
-  $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
-
-  $stmt->bindParam(':name', $nameParam, PDO::PARAM_STR);
-  $stmt->bindParam(':timestamp', $timestampParam, PDO::PARAM_STR);
-  
-  date_default_timezone_set("Europe/Bratislava");
-  
-  $nameParam = getenv("username");;
-  $timestampParam = date('Y-m-d H:i:s',time());
-
-  $stmt->execute();
-}
-
 include("access/access.php");
 
 ?>
@@ -96,7 +80,7 @@ include("access/access.php");
     <link rel="icon" type="image/x-icon" href="heart.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body onload="<?php noteVisit();  ?>">
+  <body>
   <?php 
     if ($access) { include("app.component.php"); } 
     else { include("pages/gate/gate.php"); }
