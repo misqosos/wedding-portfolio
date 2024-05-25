@@ -16,3 +16,10 @@ function postPerson(formular) {
         .then((response) => {console.log(response.json())})
         .then((json) => console.log(json));
 }
+  
+function postVisit(name) {
+    fetch('https://jessiewoody.eu/backend/person/postToDb.php', {
+        method: "POST",
+        body: JSON.stringify(name)
+    })
+}

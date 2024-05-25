@@ -1,0 +1,24 @@
+
+.motivation-title {
+    position: fixed;
+    top: 3vw;
+    left: 6vw;
+    rotate: -30deg;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: brown;
+    font-size: 3vw;
+    font-family: lobster;
+    transition: rotate 0.5s;
+    border-radius: 10vw;
+}
+
+.motivation-title:hover {
+    text-decoration: underline;
+    rotate: 330deg;
+    border-style: solid;
+}

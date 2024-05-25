@@ -1,16 +1,18 @@
 
 .title-names-header {
-    position: relative;
+    position: fixed;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     background-color: var(--backgroundColor);
     box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 15%);
     width: 27vw;
     border-radius: 0px 0px 6vw 6vw;
-    text-align: center;
+    left: 0;
+    right: 0;
     padding: 0 auto;
     margin: 0 auto;
     top: 0vw;
+    text-align: center;
 }
 
 .menu-wrapper-names-header {
@@ -50,7 +52,7 @@
 
 .names-in-header {
     margin: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     padding: 0;
     font-family: var(--fontFamily);
     font-size: 4vw;

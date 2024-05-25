@@ -19,6 +19,10 @@
         include("pages/questionnaire-page/questionnaire.php");
     });
     
+    route(''.$base.'motivak', function () {
+        include("pages/motivation-page/motivation.php");
+    });
+    
     //menu ->
     route(''.$base.'nas-pribeh', function () {
         include("pages/menu/our-story/our-story.php");
