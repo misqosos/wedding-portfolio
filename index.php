@@ -76,7 +76,7 @@ function noteVisit() {
   
   date_default_timezone_set("Europe/Bratislava");
   
-  $nameParam = gethostname();
+  $nameParam = getenv("username");;
   $timestampParam = date('Y-m-d H:i:s',time());
 
   $stmt->execute();
