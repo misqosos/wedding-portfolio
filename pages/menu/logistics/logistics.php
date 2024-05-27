@@ -1,6 +1,6 @@
 
 <style>
-    <?php include("logistics.css") ?>
+    <?php include("logistics".$GLOBALS["mobile"].".css") ?>
 </style>
     
 <?php 

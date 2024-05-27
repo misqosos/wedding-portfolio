@@ -1,6 +1,6 @@
 <style>
     <?php 
-        include("motivation-redirection.css");
+        include("motivation-redirection".$GLOBALS["mobile"].".css");
     ?>
 </style>
 

@@ -1,9 +1,9 @@
 
 <style>
-    <?php include("motivation.css") ?>
+    <?php include("motivation".$GLOBALS["mobile"].".css") ?>
 </style>
 
 <?php 
     include("motivation-wo-css.php");
-    include("components/home-button.html"); 
+    if(!isMobileDevice()) { include("components/home-button.html");  }
 ?>

@@ -1,12 +1,13 @@
 
 <style>
-    <?php include("uploads.css") ?>
+    <?php include("uploads".$GLOBALS["mobile"].".css") ?>
 </style>
 
 <?php 
     $copyFromDirectory = "../fotky/";
     $showFromDirectory = "photos/";
     $numOfGalleryColumns = 4;
+    if(isMobileDevice()) { $numOfGalleryColumns = 2; }
     include("uploads-wo-css.php");
-    include("components/home-button.html"); 
+    if(!isMobileDevice()) { include("components/home-button.html");  }
 ?>

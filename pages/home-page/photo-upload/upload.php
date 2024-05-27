@@ -1,7 +1,7 @@
 
 <style>
     <?php
-        include("upload.css");
+        include("upload".$GLOBALS["mobile"].".css");
     ?>
 </style>
 <?php

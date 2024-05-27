@@ -1,7 +1,7 @@
 
 <style type="text/css">
     <?php
-        include("questionnaire-page.component.css")
+        include("questionnaire-page.component".$GLOBALS["mobile"].".css")
     ?>
 </style>
 <?php
@@ -9,6 +9,6 @@
     $pathToForm = "forms/$personName-form.html";
 
     include("questionnaire-page-template-wo-css.php");
-    include("components/home-button.html")
+    include("components/home-button".$GLOBALS["mobile"].".html")
 ?>
 

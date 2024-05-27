@@ -1,12 +1,12 @@
 
 <style type="text/css">
   <?php
-    include("countdown.component.css")
+    include("countdown.component".$GLOBALS["mobile"].".css")
   ?>
 </style>
 
 <?php
-  include("countdown.component.html")
+  include("countdown.component-html.php")
 ?>
 
 <script>

@@ -23,10 +23,10 @@
     </li>
     <li>
         <label class="option-decor">&#9825;&nbsp;
-            <?php if($showGamesOption) : ?>
-                <a href="<?php echo $gamesPath ?>">Zahraj sa</a>
-            <?php else : ?>
+            <?php if(isMobileDevice()) : ?>
                 <a style="color: gray;">Zahraj sa (len pre PC)</a>
+            <?php else : ?>
+                <a href="<?php echo $gamesPath ?>">Zahraj sa</a>
             <?php endif; ?>
         &nbsp;&#9825;</label>
     </li>

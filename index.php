@@ -1,6 +1,7 @@
 <?php
   $GLOBALS["man"] = "woody";
   $GLOBALS["woman"] = "jessie";
+  $GLOBALS["mobile"] = "";
   include("backend/database.class.php");
 ?>
 <?php
@@ -11,8 +12,7 @@
   } 
 
   if(isMobileDevice()){
-    header('Location: /m/');
-    exit;
+    $GLOBALS["mobile"] = "-m";
   }
 
   $isHome = $_SERVER["REQUEST_URI"] == "/home" ? true : false;
@@ -80,7 +80,7 @@ include("access/access.php");
     <link rel="icon" type="image/x-icon" href="heart.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
+  <body <?php if(isMobileDevice() && $access) { echo 'onclick="hideMenu()"'; } ?>>
   <?php 
     if ($access) { include("app.component.php"); } 
     else { include("pages/gate/gate.php"); }

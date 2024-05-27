@@ -1,7 +1,7 @@
 
 <style type="text/css">
     <?php
-        include("invitation-header.component.css");
+        include("invitation-header.component".$GLOBALS["mobile"].".css");
     ?>
 </style>
 <?php

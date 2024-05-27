@@ -1,7 +1,7 @@
 
 <style type="text/css">
     <?php
-        include("questionnaire-redirection.component.css");
+        include("questionnaire-redirection.component".$GLOBALS["mobile"].".css");
     ?>
 </style>
 
