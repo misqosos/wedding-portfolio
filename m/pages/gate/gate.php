@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
     }
-    input[type=text] {
+    input[type=password] {
         width: 20vh;
         height: auto;
         font-size: 3vh;
@@ -60,7 +60,8 @@
 <div class="gate-view">
     <img src="../assets/images/frame.png" alt="ram" class="ram">
     <form action="/m/index.php" method="post" style="text-align: center; position: relative;">
-        <input type="text" name="pass"><br>
+        <input type="password" name="pass"><br>
+        <input type="hidden" name="uri" value="<?php echo $_SERVER['REQUEST_URI'] ?>">
         <button type="submit" class="submit-button">Potvrdiť</button>
     </form>
 </div>
