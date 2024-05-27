@@ -6,7 +6,7 @@
     background-color: var(--backgroundColor);
     box-shadow: 0px 0px 8px 8px rgb(0 0 0 / 15%);
     width: 27vw;
-    border-radius: 0px 0px 6vw 6vw;
+    border-radius: 0px 0px 1vw 6vw;
     left: 0;
     right: 0;
     padding: 0 auto;
@@ -25,6 +25,10 @@
 
 .title-names-header:hover .menu-wrapper-names-header {
     max-height: 30vw;
+}
+
+.title-names-header:hover .menu-hint {
+    display: none;
 }
 
 .menu-wrapper-names-header li {
@@ -68,6 +72,13 @@
     color: var(--borderColor);
     
     margin-bottom: 3vh;
+}
+
+.menu-hint {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 2vw;
 }
 
 @keyframes header-slide {

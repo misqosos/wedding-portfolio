@@ -4,7 +4,6 @@
         include("names-header.component".$GLOBALS["mobile"].".css")
     ?>
 </style>
-
 <div class="title-names-header" id="slide-names-header" <?php if(isMobileDevice()) { echo 'onclick="showMenu()"'; } ?>>
     <?php
         $homePath = "/";
@@ -15,6 +14,9 @@
 
         include("names-header-menu.component.php")
     ?>
+    <div class="menu-hint">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
 </div>
 
 <script>
