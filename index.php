@@ -37,7 +37,6 @@ function checkPost($pass) {
     if ($result) {
       if ($pass == $result->lunch) {
         setcookie('cake', $result->id, time() + (86400 * 30), "/"); // 86400 = 1 day
-        header('Location: /');
         return true;
       }
     }
