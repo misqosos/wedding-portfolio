@@ -11,6 +11,9 @@
             <input type="hidden" name="personName" value="<?php echo $GLOBALS["man"] ?>">
             <button type="submit" class="hidden-button"></button>
         </form>
+        <div class="quiz-label-right">
+            Kvíz&nbsp;&nbsp;&rarr;
+        </div>
         <img src="<?php echo $imagesPath . $GLOBALS["man"] ?>.png" alt="<?php echo $GLOBALS["man"] ?>" style="width: inherit;">
     </div>
 </div>
@@ -27,6 +30,9 @@
             <input type="hidden" name="personName" value="<?php echo $GLOBALS["woman"] ?>">
             <button type="submit" class="hidden-button"></button>
         </form>
+        <div class="quiz-label-left">
+            &larr;&nbsp;&nbsp;Kvíz
+        </div>
         <img src="<?php echo $imagesPath . $GLOBALS["woman"] ?>.png" alt="<?php echo $GLOBALS["woman"] ?>" style="width: inherit;">
     </div>
 </div>

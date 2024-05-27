@@ -15,7 +15,7 @@
         include("names-header-menu.component.php")
     ?>
     <div class="menu-hint">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+        <i class="fa fa-bars" aria-hidden="true" style="color: var(--borderColor);"></i>
     </div>
 </div>
 

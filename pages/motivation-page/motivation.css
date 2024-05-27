@@ -32,7 +32,7 @@
 input[type=company-name] {
     width: auto;
     height: auto;
-    font-size: 1.5vw;
+    font-size: 3vw;
     font-family: var(--fontFamily);
     border-radius: 1vw;
     padding: 0.5vh 1vw;
@@ -47,7 +47,7 @@ input[type=company-name] {
     border-style: solid;
     color: white;
     cursor: pointer;
-    font-size: 1.5vw;
+    font-size: 3vw;
     font-family: var(--fontFamily);
     height: auto;
     padding: 1vw;

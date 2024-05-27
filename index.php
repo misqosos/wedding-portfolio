@@ -14,8 +14,6 @@
   if(isMobileDevice()){
     $GLOBALS["mobile"] = "-m";
   }
-
-  $isHome = $_SERVER["REQUEST_URI"] == "/home" ? true : false;
 ?>
 
 <?php

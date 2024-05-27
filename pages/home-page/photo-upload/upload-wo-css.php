@@ -1,5 +1,5 @@
 
-<div class="frame-upload">  
+<div class="frame-upload">
     <form action="<?php echo $actionPath ?>" method="post" enctype="multipart/form-data" class="button-wrapper">
 
         <?php if(isset($_FILES["filesToUpload"])) : ?>
@@ -9,7 +9,7 @@
         <?php endif; ?>
         
         <div class="add-button">
-            <i class="fa fa-camera-retro" aria-hidden="true"></i>
+            <i class="fa fa-camera-retro" aria-hidden="true"><div class="add-photo-label">Pridať fotky</div></i>
             <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" class="hidden-add-button" onchange="checkFiles()">
         </div>
 

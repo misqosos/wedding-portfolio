@@ -4,7 +4,7 @@
     if (!isset($_COOKIE['cake'])) { $access = false; }
         
     if (isset($_POST['pass'])){
-        if (checkPost($_POST['pass'])){ $access = true; header('Location: '.$_POST["uri"]); }
+        if (checkPost($_POST['pass'])){ $access = true; }
     }
 
     if (isset($_COOKIE['cake'])) {

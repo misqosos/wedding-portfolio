@@ -67,3 +67,11 @@
   background-color: white;
   color: olive;
 }
+
+.add-photo-label {
+  position: absolute;
+  font-family: var(--fontFamily);
+  font-size: 1.2vh;
+  top: 1.6vh;
+  right: 1.2vh;
+}

@@ -54,6 +54,22 @@
   border: none;
 }
 
+.quiz-label-left {
+  position: absolute;
+  right: -6vw;
+  bottom: 10vw;
+  font-family: var(--fontFamily);
+  font-size: 2vw;
+}
+
+.quiz-label-right {
+  position: absolute;
+  left: -6vw;
+  bottom: 10vw;
+  font-family: var(--fontFamily);
+  font-size: 2vw;
+}
+
 .left-side {
   transform: scaleX(-1);
   right: -11.5vw;

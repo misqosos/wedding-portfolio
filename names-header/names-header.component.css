@@ -76,7 +76,7 @@
 
 .menu-hint {
     position: absolute;
-    bottom: 1vw;
+    bottom: 0.5vw;
     right: 1vw;
     font-size: 2vw;
 }
