@@ -18,6 +18,7 @@
         private $hasSeenParentsFirst;
         private $owner;
         private $favSport;
+        private $meetingPlace;
         private $isAllCorrect;
 
         public function __construct() {}
@@ -37,6 +38,7 @@
                 hasSeenParentsFirst, 
                 favSport, 
                 owner, 
+                meetingPlace, 
                 isAllCorrect) 
                     VALUES 
                     (
@@ -53,6 +55,7 @@
                         :hasSeenParentsFirst,
                         :favSport,
                         :owner,
+                        :meetingPlace, 
                         :isAllCorrect
                     )';
             
@@ -71,6 +74,7 @@
             $stmt->bindParam(':hasSeenParentsFirst', $this->hasSeenParentsFirst, PDO::PARAM_BOOL);
             $stmt->bindParam(':favSport', $this->favSport, PDO::PARAM_STR);
             $stmt->bindParam(':owner', $this->owner, PDO::PARAM_STR);
+            $stmt->bindParam(':meetingPlace', $this->meetingPlace, PDO::PARAM_STR);
             $stmt->bindParam(':isAllCorrect', $this->isAllCorrect, PDO::PARAM_BOOL);
             
             $this->personName =  $person->personName;
@@ -87,6 +91,7 @@
             $this->hasSeenParentsFirst =  $person->hasSeenParentsFirst;
             $this->favSport =  $person->favSport;
             $this->owner =  $person->owner;
+            $this->meetingPlace =  $person->meetingPlace;
 
             $stmt->execute();
 
