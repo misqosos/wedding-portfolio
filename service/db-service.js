@@ -1,6 +1,6 @@
 
 async function getCorrectPerson(personName) {
-    const response = await fetch('https://jessiewoody.eu/backend/person/fetchFromDb.php', {
+    const response = await fetch('https://'+window.location.host+'/backend/person/fetchFromDb.php', {
         method: "POST",
         body: personName,
     });
@@ -9,7 +9,7 @@ async function getCorrectPerson(personName) {
 }
   
 function postPerson(formular) {
-    fetch('https://jessiewoody.eu/backend/person/postToDb.php', {
+    fetch('https://'+window.location.host+'/backend/person/postToDb.php', {
         method: "POST",
         body: JSON.stringify(formular)
     })
@@ -18,7 +18,7 @@ function postPerson(formular) {
 }
   
 function postVisit(name) {
-    fetch('https://jessiewoody.eu/backend/person/postToDb.php', {
+    fetch('https://'+window.location.host+'/backend/person/postToDb.php', {
         method: "POST",
         body: JSON.stringify(name)
     })
