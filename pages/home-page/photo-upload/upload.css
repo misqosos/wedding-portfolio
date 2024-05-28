@@ -76,6 +76,7 @@
 .add-photo-label {
   position: absolute;
   font-family: var(--fontFamily);
+  font-weight: bolder;
   font-size: 1.2vw;
   top: 1.6vw;
   right: 1.2vw;
