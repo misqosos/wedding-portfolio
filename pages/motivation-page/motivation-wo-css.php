@@ -4,11 +4,10 @@
     <?php if(isset($_POST["companyName"]) && !empty($_POST["companyName"])) : ?>
         <?php noteVisit($_POST["companyName"]); ?>
         <?php 
-            $headers = "From: Odomna@premna\r\n";
-            $headers .= "Reply-To: myplace2@example.com\r\n";
-            $headers .= "Return-Path: myplace@example.com\r\n";
-            $headers .= "CC: sombodyelse@example.com\r\n";
-            $headers .= "BCC: hidden@example.com\r\n";
+
+            $headers = "MIME-Version: 1.0\r\n"; 
+            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+            $headers .= "From: The Sending Name donotreply@mysite.co.uk\r\n";
             mail("michaldrotar14@gmail.com", strtoupper($_POST["companyName"])." si pozreli motivak", "predmet", $headers); 
         ?>
         <div style="text-align: center;">
