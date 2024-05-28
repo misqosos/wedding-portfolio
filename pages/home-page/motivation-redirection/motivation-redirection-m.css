@@ -4,6 +4,7 @@
     top: 7vh;
     left: -8vh;
     rotate: -90deg;
+    -webkit-rotate: -90deg;
     width: 20vh;
     height: 20vh;
     display: flex;
