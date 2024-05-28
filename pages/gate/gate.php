@@ -13,6 +13,14 @@
         <?php if(!$access && isset($_POST["pass"])) : ?>
             <label style="color: red;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>&nbsp;Nesprávne heslo, skúste znova</label><br>
         <?php endif; ?> 
-        <button type="submit" class="submit-button">Potvrdiť</button>
+        <button type="submit" class="submit-button" id="submit-button" onclick="showLoading()">Potvrdiť</button>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw" id="spinner" style="display: none; width: 100%;"></i>
     </form>
 </div>
+
+<script>
+    function showLoading(){
+        document.getElementById("submit-button").style.display = 'none';
+        document.getElementById("spinner").style.display = 'block';
+    }
+</script>
