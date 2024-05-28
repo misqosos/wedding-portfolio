@@ -6,8 +6,8 @@
     ?>
 </style>
 <div id="border-app" class="border-app">
-    <img src="assets/images/flower.png" alt="Flower" class="flower-app top-left-app">
-    <img src="assets/images/flower.png" alt="Flower" class="flower-app top-right-app">
+    <img src="assets/images/pavucina-left.png" alt="Flower" class="flower-app top-left-app">
+    <img src="assets/images/pavucina-right.png" alt="Flower" class="flower-app top-right-app">
 </div>
 <!-- <router-outlet> -->
 <?php
