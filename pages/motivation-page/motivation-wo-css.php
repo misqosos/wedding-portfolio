@@ -3,13 +3,6 @@
 <div style="top: 0; position: relative;">
     <?php if(isset($_POST["companyName"]) && !empty($_POST["companyName"])) : ?>
         <?php noteVisit($_POST["companyName"]); ?>
-        <?php 
-
-            $headers = "MIME-Version: 1.0\r\n"; 
-            $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-            $headers .= "From: The Sending Name donotreply@mysite.co.uk\r\n";
-            mail("michaldrotar14@gmail.com", strtoupper($_POST["companyName"])." si pozreli motivak", "predmet", $headers); 
-        ?>
         <div style="text-align: center;">
             <div class="main-title">MOTIVÁCIA&nbsp;&nbsp; MICHALA&nbsp;&nbsp; NASTÚPIŤ&nbsp;&nbsp; DO&nbsp;&nbsp; <label style="font-weight: bolder;"><?php echo strtoupper($_POST["companyName"]) ?></label>&nbsp;&nbsp; AKO&nbsp;&nbsp; UCHO</div>
             <p class="story-text">
