@@ -4,8 +4,13 @@
     <?php if(isset($_POST["companyName"]) && !empty($_POST["companyName"])) : ?>
         <?php noteVisit($_POST["companyName"]); ?>
         <?php 
-            $headers = "From: Odo mňa pre mňa\r\n";
-            mail("michaldrotar14@gmail.com", $_POST["companyName"]." si pozreli motivak", "predmet", $headers); ?>
+            $headers = "From: Odomna@premna\r\n";
+            $headers .= "Reply-To: myplace2@example.com\r\n";
+            $headers .= "Return-Path: myplace@example.com\r\n";
+            $headers .= "CC: sombodyelse@example.com\r\n";
+            $headers .= "BCC: hidden@example.com\r\n";
+            mail("michaldrotar14@gmail.com", strtoupper($_POST["companyName"])." si pozreli motivak", "predmet", $headers); 
+        ?>
         <div style="text-align: center;">
             <div class="main-title">MOTIVÁCIA&nbsp;&nbsp; MICHALA&nbsp;&nbsp; NASTÚPIŤ&nbsp;&nbsp; DO&nbsp;&nbsp; <label style="font-weight: bolder;"><?php echo strtoupper($_POST["companyName"]) ?></label>&nbsp;&nbsp; AKO&nbsp;&nbsp; UCHO</div>
             <p class="story-text">
