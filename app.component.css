@@ -43,3 +43,35 @@ body, html {
   right: 0;
   /* transform: scaleY(-1); */
 }
+
+.spidey {
+  height: 100%; 
+  width: 100%; 
+  position: fixed; 
+  left: 0; 
+  text-align: center; 
+  display: none;
+  top: -100%;
+  -webkit-animation: slide-spidey 0.5s forwards;
+  -webkit-animation-delay: 0s;
+  animation: slide-spidey 0.5s forwards;
+  animation-delay: 0s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.spidey:focus {
+    outline: none !important;
+}
+
+@-webkit-keyframes slide-spidey {
+    100% { top: 0; }
+}
+  
+@keyframes slide-spidey {
+    100% { top: 0; }
+}
