@@ -6,8 +6,10 @@
     ?>
 </style>
 <div id="border-app" class="border-app">
-    <img src="assets/images/pavucina-left.png" alt="Flower" class="flower-app top-left-app" onclick="spidey();">
-    <img src="assets/images/pavucina-right.png" alt="Flower" class="flower-app top-right-app" onclick="spidey()">
+    <?php if ($_SERVER["REQUEST_URI"] == "/home") : ?>
+        <img src="assets/images/pavucina-left.png" alt="Flower" class="flower-app top-left-app" onclick="spidey();">
+        <img src="assets/images/pavucina-right.png" alt="Flower" class="flower-app top-right-app" onclick="spidey()">
+    <?php endif; ?>
 </div>
 <!-- <router-outlet> -->
 <?php
