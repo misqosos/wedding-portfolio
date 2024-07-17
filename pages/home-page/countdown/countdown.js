@@ -1,5 +1,5 @@
 
-weddingDate = new Date('2024-08-17T15:00:00');
+weddingDate = new Date('2024-08-17T15:30:00');
 document.getElementById('weddingDate').innerHTML += this.formatDate(this.weddingDate);
 now = new Date();
 
@@ -15,7 +15,7 @@ this.weddingDate.getMinutes() == 0)) ?
 new Date(this.now.getFullYear(), this.now.getMonth(), this.weddingDate.getDate(), this.weddingDate.getHours(), this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds()) :
 (this.weddingDate.getDate() >= this.now.getDate() ?
 new Date(this.now.getFullYear(), this.now.getMonth() + 1, this.weddingDate.getDate(), this.weddingDate.getHours(), this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds()) :
-new Date(this.now.getFullYear(), this.now.getMonth() + 1, this.weddingDate.getDate(), this.weddingDate.getHours()+1, this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds()));
+new Date(this.now.getFullYear(), this.now.getMonth() + 1, this.weddingDate.getDate(), this.weddingDate.getHours(), this.weddingDate.getMinutes(), this.weddingDate.getSeconds(), this.weddingDate.getMilliseconds()));
 
 monthsLeft = this.weddingDate.getMonth() - this.nextMonthCountdown.getMonth();
 daysLeft;
