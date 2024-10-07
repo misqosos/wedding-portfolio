@@ -4,7 +4,7 @@
     <?php if(isset($_POST["companyName"]) && !empty($_POST["companyName"])) : ?>
         <?php noteVisit($_POST["companyName"]); ?>
         <div style="text-align: center;">
-            <div class="main-title">MOTIVÁCIA&nbsp;&nbsp; MICHALA&nbsp;&nbsp; NASTÚPIŤ&nbsp;&nbsp; DO&nbsp;&nbsp; <label style="font-weight: bolder;"><?php echo strtoupper($_POST["companyName"]) ?></label>&nbsp;&nbsp; AKO&nbsp;&nbsp; UCHO</div>
+            <div class="main-title">MOTIVÁCIA&nbsp; MICHALA&nbsp; NASTÚPIŤ&nbsp; DO&nbsp; SPOLOČNOSTI&nbsp; <label style="font-weight: bolder;"><?php echo $_POST["companyName"] ?></label>&nbsp; AKO&nbsp; UCHO</div>
             <p class="story-text">
                 Prajem (dúfam, že som pri otvorení dokumentu trafil slnečný deň a dobrú náladu) krásny deň,
 

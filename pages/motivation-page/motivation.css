@@ -14,7 +14,7 @@
     position: relative;
     font-size: 2vw;
     color: var(--invitationHeaderColor);
-    font-family: var(--fontFamily);
+    font-family: georgia;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
 }
@@ -22,7 +22,7 @@
 .story-text {
     position: relative;
     font-size: 2vw;
-    font-family: var(--fontFamily);
+    font-family: georgia;
     line-height: 3vw;
     margin-left: 17vw;
     margin-right: 17vw;
