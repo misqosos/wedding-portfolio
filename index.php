@@ -79,7 +79,7 @@ include("access/access.php");
   </head>
   <body <?php if(isMobileDevice() && $access) { echo 'onclick="hideMenu()"'; } ?>>
   <?php 
-    if ($access) { include("app.component.php"); } 
+    if ($access) { include("app.component.php"); noteVisit("navsteva"); } 
     else { include("pages/gate/gate.php"); }
   ?>
   </body>
