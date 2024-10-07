@@ -11,6 +11,22 @@
   , $_SERVER["HTTP_USER_AGENT"]); 
   } 
 
+  function noteVisit($name) {
+    $sql = 'INSERT INTO visits (name, timestamp) VALUES (:name, :timestamp)';
+        
+    $stmt = DbConnection::getDatabaseConnection()->prepare($sql);
+
+    $stmt->bindParam(':name', $nameParam, PDO::PARAM_STR);
+    $stmt->bindParam(':timestamp', $timestampParam, PDO::PARAM_STR);
+    
+    date_default_timezone_set("Europe/Bratislava");
+    
+    $nameParam = $name;
+    $timestampParam = date('Y-m-d H:i:s',time());
+
+    $stmt->execute();
+  }
+
   if(isMobileDevice()){
     $GLOBALS["mobile"] = "-m";
   }
