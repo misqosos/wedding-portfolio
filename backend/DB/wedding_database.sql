@@ -28,7 +28,7 @@ CREATE TABLE `dishes`(
 DROP TABLE IF EXISTS `visits`;
 CREATE TABLE `visits`(
   name VARCHAR(200) PRIMARY KEY,
-  timestamp DATETIME;
+  timestamp DATETIME
 );
 
 INSERT INTO person (personName, make, dob, shop, age, hobbies, hairColor, height, favColor, playedOtherMovie, isAllCorrect) VALUES (
