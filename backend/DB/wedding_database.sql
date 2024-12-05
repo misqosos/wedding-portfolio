@@ -25,6 +25,12 @@ CREATE TABLE `dishes`(
   lunch VARCHAR(200)
 );
 
+DROP TABLE IF EXISTS `visits`;
+CREATE TABLE `visits`(
+  name VARCHAR(200) PRIMARY KEY,
+  timestamp DATETIME;
+);
+
 INSERT INTO person (personName, make, dob, shop, age, hobbies, hairColor, height, favColor, playedOtherMovie, isAllCorrect) VALUES (
   'jessie',
   'Drevo',
