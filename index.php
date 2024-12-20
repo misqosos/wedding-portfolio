@@ -1,3 +1,6 @@
+<?php 
+    require_once("backend/onStartupInfo.php");
+?>
 <?php
   $GLOBALS["man"] = "woody";
   $GLOBALS["woman"] = "jessie";
