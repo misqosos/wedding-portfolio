@@ -9,7 +9,9 @@
     }
 
     if (isset($_COOKIE['cake'])) {
-        if (checkCookie($_COOKIE['cake'])) { $access = true; } else {
+        if (checkCookie($_COOKIE['cake'])) { 
+            $access = true; 
+        } else {
             $access = false;
         }
     }

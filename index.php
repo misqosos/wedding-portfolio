@@ -5,7 +5,7 @@
   $GLOBALS["man"] = "woody";
   $GLOBALS["woman"] = "jessie";
   $GLOBALS["mobile"] = "";
-  include("backend/database.class.php");
+  require_once("backend/database.class.php");
 ?>
 <?php
   function isMobileDevice() { 

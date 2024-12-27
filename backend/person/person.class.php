@@ -1,5 +1,5 @@
 <?php
-    include ("../database.class.php")
+    require_once ("../database.class.php")
 ?>
 
 <?php
