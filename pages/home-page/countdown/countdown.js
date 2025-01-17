@@ -1,5 +1,5 @@
 
-weddingDate = new Date('2025-5-15T15:45:00');
+weddingDate = new Date('2025-05-15T15:45:00');
 document.getElementById('weddingDate').innerHTML += this.formatDate(this.weddingDate);
 now = new Date();
 
